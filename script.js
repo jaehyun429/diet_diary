@@ -30,6 +30,10 @@ function renderCalendar() {
             month === new Date().getMonth()) {
             dateDiv.classList.add('today');
         }
+        dateDiv.addEventListener('click', function() {
+            // 날짜와 관련된 정보와 함께 diary.html로 이동
+            window.location.href = `http://127.0.0.1:5500/index1.html`;
+        });
 
         daysContainer.appendChild(dateDiv);
     }

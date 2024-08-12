@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <div class="header button">
+    <a href="#mypage">
+      <img src= "chacha.png" alt="내 정보">
+    </a>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+      </ul>
+    </div>
+       <div class="content">
+      <div class="left-content">
+        <div class="section" id="diet">
+          <h2>식단 기록</h2>
+          <div class="diet-section">
+            <div class="diet-entry">
+              <h3 class="inline-heading">아침</h3>
+              <textarea id="dietInputMorning" placeholder="오늘의 식단을 기록하세요"></textarea>
+              <button onclick="saveDiet('dietInputMorning')">저장</button>
+            </div>
+            <div class="diet-entry">
+              <h3 class="inline-heading">점심</h3>
+              <textarea id="dietInputAfternoon" placeholder="오늘의 식단을 기록하세요"></textarea>
+              <button onclick="saveDiet('dietInputAfternoon')">저장</button>
+            </div>
+            <div class="diet-entry">
+              <h3 class="inline-heading">저녁</h3>
+              <textarea id="dietInputEvening" placeholder="오늘의 식단을 기록하세요"></textarea>
+              <button onclick="saveDiet('dietInputEvening')">저장</button>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="exercise">
+          <h2>운동 기록</h2>
+          <div class="exercise-section">
+            <div class="exercise-entry">
+              <textarea id="exerciseInput" placeholder="오늘의 운동을 기록하세요"></textarea>
+              <button onclick="saveExercise()">저장</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="section" id="weight">
+          <h2>몸무게 그래프</h2>
+          <input type="number" id="weightInput" placeholder="몸무게를 입력하세요.">
+          <button onclick="saveWeight()">저장</button>
+          <canvas id="weightChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

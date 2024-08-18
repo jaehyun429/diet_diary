@@ -50,3 +50,5 @@ nextMonthButton.addEventListener('click', () => {
 });
 
 renderCalendar();
+
+//정재현님은 바보다ㅋㅋ 기업: 자넨 해고일세!

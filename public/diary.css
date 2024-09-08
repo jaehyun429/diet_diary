@@ -1,0 +1,142 @@
+/* 공통 스타일 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 95%;
+}
+
+/* 헤더 스타일 */
+.header {
+  width: 102%;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1.2px solid rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1;
+}
+
+.header a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: white;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* 컨테이너 및 레이아웃 */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.sidebar {
+  background-color: white;
+  padding: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-content, .right-content {
+  display: flex;
+  border: 2px solid #ddd;
+  flex-direction: column;
+  gap: 20px;
+  position: relative; /* 새로운 버튼 위치를 위해 상대 위치 지정 */
+}
+
+/* 섹션 스타일 */
+.section {
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #007bff;
+  text-align: center;
+}
+
+/* 캔버스 스타일 */
+canvas {
+  width: 100%;
+  height: 300px;
+}
+
+/* 식단 및 운동 섹션 스타일 */
+.diet-section, .exercise-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diet-entry, .exercise-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.diet-entry textarea, .exercise-entry textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 버튼 스타일 */
+.diet-entry button, .exercise-entry button {
+  align-self: flex-end;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* 저장 버튼 위치 및 스타일 */
+.right-content .save-button {
+  position: absolute;
+  bottom: 20px;  /* 아래쪽으로부터 20px */
+  right: 20px;   /* 오른쪽으로부터 20px */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff; /* 파란색으로 변경 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.right-content .save-button:hover {
+  background-color: #0056b3; /* 클릭 시 어두운 파란색 */
+}
